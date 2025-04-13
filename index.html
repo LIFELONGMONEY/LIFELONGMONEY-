@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>On the Come Up</title>
-  <style>
-    @font-face {
-      font-family: 'DevilBreeze';
-      src: url('fonts/DevilBreeze.ttf') format('truetype');
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON THE COME UP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            color: white;
+            font-family: 'Anton', 'Bebas Neue', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'DevilBreeze', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      font-size: 2.8rem;
-      letter-spacing: 1px;
-    }
+        .comeup-text {
+            font-size: 4.5vw;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            max-width: 80%;
+        }
 
-    .glow {
-      text-shadow: 0 0 10px #fff, 0 0 20px #666;
-    }
-  </style>
+        .fucking {
+            color: #ff0000;
+            font-style: italic;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.9; }
+            50% { opacity: 1; text-shadow: 0 0 20px rgba(255, 0, 0, 0.9); }
+            100% { opacity: 0.9; }
+        }
+
+        /* Optional: Add a glitch effect on hover */
+        .comeup-text:hover {
+            animation: glitch 0.3s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+    </style>
 </head>
 <body>
-  <div class="glow">
-    i promise you I’m on the fucking come up
-  </div>
+    <div class="comeup-text">
+        I PROMISE YOU I’M ON THE <span class="fucking">FUCKING</span> COME UP
+    </div>
 </body>
 </html>
